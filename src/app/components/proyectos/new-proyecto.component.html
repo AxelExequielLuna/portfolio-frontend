@@ -1,0 +1,53 @@
+<body class="fond">
+    <section class="vh-100 gradient-custom">
+    <div class="container  h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Add Project</h2>
+  
+                <form #f="ngForm" (ngSubmit)="onCreate()" novalidate>
+  
+                  <div class="tex-left form-outline form-white mb-4">
+                        <label for="nombreP">Name</label>
+                        <input type="text" class="form-control form-control-lg" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="descripcionE">Description</label>
+                    <input type="text" class="form-control form-control-lg" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="imagenP">Image</label>
+                    <input type="text" class="form-control form-control-lg" id="imagenP" name="imagenP" [(ngModel)]="imagenP" required>
+
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="linkP">Link</label>
+                    <input type="text" class="form-control form-control-lg" id="linkP" name="linkP" [(ngModel)]="linkP" required>
+                  </div>
+  
+                  <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+  
+                  <button class=" align-items-center btn btn-outline-light btn-lg px-5" type="submit">Add Project</button>
+  
+                </form>
+  
+              </div>
+  
+              <div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

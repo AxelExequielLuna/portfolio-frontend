@@ -12,10 +12,25 @@
 
 .part, .part2{
     display: inline-block;
+    justify-content: end;
     text-align: justify;
 }
 
 .img-proyecto{
     box-shadow: 10px 10px 30px black;
+    justify-content: end;
     
+}
+
+.container{
+    display: flex;
+    justify-content: left;
+}
+
+.w{
+    margin-left: 10px;
+}
+
+.k{
+    margin-bottom: 10px;
 }

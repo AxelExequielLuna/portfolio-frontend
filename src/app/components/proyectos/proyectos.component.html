@@ -1,12 +1,21 @@
 <div class="row">
-    <h1>Projects</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 part">
-            <h3>Example</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas eveniet reiciendis quas, repellat numquam voluptates eaque fugiat consectetur facilis, repellendus laborum sapiente eum doloremque assumenda similique necessitatibus minima tenetur iusto!</p>
+    <div style="margin-bottom: 10px;" class="container">
+        <h1>Projects</h1>
+        <button type="button" class="w btn btn-light" routerLink="/newpro" *ngIf="isLogged"><i class="bi bi-plus-circle"></i> Add</button>
+    </div>
+    <div *ngFor="let Proyecto of proy" class="contenedor">
+
+        <div style="margin:auto;" class="col-sm-12 col-md-7 col-lg-7 part">
+            <div *ngIf="isLogged" class="" style="margin-inline-start: 0%;">
+                <button class="btn btn-success" routerLink="/editpro/{{Proyecto.id}}"><i class= "bi bi-pencil-square"></i> Edit</button>
+                <button type="button" class="w btn btn-danger" (click)="onDelete(Proyecto.id)"><i class="bi bi-x-circle"></i> Delete</button>
+            </div>
+            <h3>{{Proyecto.nombreP}}</h3>
+            <p>{{Proyecto.descripcionP}}</p>
         </div>
-        <div class="offset-md-1 offset-lg-1 part2 col-sm-12 col-md-3 col-lg-3">
-             <img class="img-fluid img-proyecto" src="../../../assets/proyect.png" alt="">
+        <div style="justify-content: right;" class="offset-md-1 offset-lg-1 part2 col-sm-12 col-md-3 col-lg-3">
+             <img style="margin-bottom: 5%;" class=" img-fluid img-proyecto" src="{{Proyecto.imagenP}}" alt="">
         </div>
+
     </div>
 </div>
