@@ -1,0 +1,71 @@
+<body class="fond">
+    <section class="vh-100 gradient-custom">
+    <div class="container  h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Edit Hard & Soft skills</h2>
+  
+                <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+  
+                  <div class="tex-left form-outline form-white mb-4">
+                        <label for="percent">Percent</label>
+                        <input type="text" class="form-control form-control-lg" id="percent" name="percent" [(ngModel)]="hys.porcentaje" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="image">Image</label>
+                    <input type="text" class="form-control form-control-lg" id="image" name="image" [(ngModel)]="hys.image" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="showImage">Show image</label>
+                    <input type="text" class="form-control form-control-lg" id="showImage" name="showImage" [(ngModel)]="hys.showImage" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="height">Height</label>
+                    <input type="text" class="form-control form-control-lg" id="height" name="height" [(ngModel)]="hys.height" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="width">Width</label>
+                    <input type="text" class="form-control form-control-lg" id="width" name="width" [(ngModel)]="hys.width" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="showTitle ">Show title</label>
+                    <input type="text" class="form-control form-control-lg" id="showTitle " name="showTitle " [(ngModel)]="hys.showTitle " required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control form-control-lg" id="title" name="title " [(ngModel)]="hys.title  " required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="fontSize">Font size</label>
+                    <input type="text" class="form-control form-control-lg" id="fontSize" name="fontSize" [(ngModel)]="hys.fontSize  " required>
+                  </div>
+                  <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+  
+                  <button class=" align-items-center btn btn-outline-light btn-lg px-5" type="submit">Update Hard & Soft skills</button>
+  
+                </form>
+  
+              </div>
+  
+              <div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

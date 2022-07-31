@@ -1,54 +1,36 @@
 <div class="row">
-    <h1>Hard & Soft skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
+    <div class="container">
+        <h1>Hard & Soft skills</h1>
+        <button type="button" class="w btn btn-light" routerLink="/newhys" *ngIf="isLogged"><i class="bi bi-plus-circle"></i> Add</button>
+    </div>
+
+    <div *ngFor="let Hys of expe" class="text-center col-sm-4 col-md-4 col-lg-4">
+        <div class="row" style="justify-content: center;">
+        <div *ngIf="isLogged" class="container" style="justify-content: center;">
+            <button class="btn btn-success" routerLink="/editHys/{{Hys.id}}"><i class= "bi bi-pencil-square"></i> Edit</button>
+            <button type="button" class="w btn btn-danger" (click)="onDelete(Hys.id)"><i class="bi bi-x-circle"></i> Delete</button>
+        </div>
     <circle-progress
-    [percent]="85"
+    [percent]="Hys.porcentaje"
     [radius]="100"
-    [imageSrc]="'../../../assets/skills/html.png'"
-    [showImage]="true"
-    [imageHeight]="70"
-    [imageWidth]="70"
+    [imageSrc]="Hys.image"
+    [showImage]="Hys.showImage"
+    [imageHeight]="Hys.height"
+    [imageWidth]="Hys.width"
     [outerStrokeWidth]="16"
     [innerStrokeWidth]="8"
     [outerStrokeColor]="'#a1b5cb'"
     [innerStrokeColor]="'#ffffff'"
+    [titleColor]="'#ffffff'"
+    [subtitleColor]="'#ffffff'"
+    [unitsColor]="'#ffffff'"
     [animation]="true"
     [animationDuration]="1000"
-    [showTitle]="false"
+    [showSubtitle]="Hys.showTitle"
+    [subtitle]="Hys.title"
+    [subtitleFontSize]="Hys.fontSize"
     ></circle-progress>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/skills/js.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#a1b5cb'"
-        [innerStrokeColor]="'#ffffff'"
-        [animation]="true"
-        [animationDuration]="1000"
-        [showTitle]="false"
-        ></circle-progress>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-        [percent]="85"
-        [radius]="100"
-        [imageSrc]="'../../../assets/skills/CSS.png'"
-        [showImage]="true"
-        [imageHeight]="70"
-        [imageWidth]="70"
-        [outerStrokeWidth]="16"
-        [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#a1b5cb'"
-        [innerStrokeColor]="'#ffffff'"
-        [animation]="true"
-        [animationDuration]="1000"
-        [showTitle]="false"
-        ></circle-progress>
-</div>
+  
 </div>

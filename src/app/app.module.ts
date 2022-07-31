@@ -22,6 +22,8 @@ import { NewExperienciaComponent } from './components/experiencia/new-experienci
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { EditHysComponent } from './components/hys/edit-hys.component';
+import { NewHysComponent } from './components/hys/new-hys.component';
 
 
 
@@ -43,6 +45,8 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
     EditExperienciaComponent,
     NewEducacionComponent,
     EditEducacionComponent,
+    EditHysComponent,
+    NewHysComponent,
   ],
   imports: [
     BrowserModule,

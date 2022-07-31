@@ -4,3 +4,12 @@
     padding: 20px;
     margin: auto;
 }
+
+.w{
+    margin-left: 10px;
+}
+
+.container{
+    display: flex;
+    justify-content: left;
+}
