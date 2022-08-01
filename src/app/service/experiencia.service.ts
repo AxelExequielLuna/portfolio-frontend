@@ -10,7 +10,7 @@ import { Experiencia } from '../model/experiencia';
 
 export class ExperienciaService {
 
-  expURL = "http://localhost:8080/api/explab/";
+  expURL = "https://axelluna-backend.herokuapp.com/api/explab/";
 
   constructor(private httpClient: HttpClient) { }
 

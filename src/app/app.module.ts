@@ -26,6 +26,7 @@ import { EditHysComponent } from './components/hys/edit-hys.component';
 import { NewHysComponent } from './components/hys/new-hys.component';
 import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
+import { EditPersonaComponent } from './components/acerca/edit-persona.component';
 
 
 
@@ -51,6 +52,7 @@ import { EditProyectoComponent } from './components/proyectos/edit-proyecto.comp
     NewHysComponent,
     NewProyectoComponent,
     EditProyectoComponent,
+    EditPersonaComponent,
   ],
   imports: [
     BrowserModule,

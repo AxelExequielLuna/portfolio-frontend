@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from 'src/app/model/persona.model';
+import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -8,15 +8,20 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-    persona: persona = new persona("", "", "","","","");
+    
+  per: Persona[] = [];
 
-  constructor(public personaService: PersonaService) { }
+  constructor(private sPersona: PersonaService) { }
 
+  isLogged = false;
+  
   ngOnInit(): void {
-    this.personaService.getPersonas().subscribe(data => {
-      this.persona = data;
-    }
+    this.sPersona.lista().subscribe(
+      (data) => {
+        this.per = data;
+      }
     );
+
   }
 
 }

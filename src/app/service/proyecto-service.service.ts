@@ -10,7 +10,7 @@ import { Proyecto } from '../model/proyecto';
 
 export class ProyectoService {
 
-  proURL = "http://localhost:8080/api/proyectos/";
+  proURL = "https://axelluna-backend.herokuapp.com/api/proyectos/";
 
   constructor(private httpClient: HttpClient) { }
 

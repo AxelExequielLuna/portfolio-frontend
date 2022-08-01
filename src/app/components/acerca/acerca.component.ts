@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from 'src/app/model/persona.model';
+import { Router } from '@angular/router';
+import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-acerca',
@@ -8,15 +10,40 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./acerca.component.css']
 })
 export class AcercaComponent implements OnInit {
-  persona: persona = new persona("", "", "","","","");
-
-  constructor(public personaService: PersonaService) { }
+  persona: Persona[] = [];
+  
+  constructor(private sPersona: PersonaService, private tokenService: TokenService, private router:Router ) { }
+  
+  isLogged = false;
 
   ngOnInit(): void {
-    this.personaService.getPersonas().subscribe(data => {
-      this.persona = data;
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
     }
+
+  }
+
+  cargarPersona():void{
+    this.sPersona.lista().subscribe(
+      (data) => {
+        this.persona = data;
+      }
     );
   }
 
+  onLogout():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+  login(): void{
+    this.router.navigate(['login']);
+  }
+
 }
+
+
+
+

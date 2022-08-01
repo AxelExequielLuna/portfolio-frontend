@@ -1,0 +1,71 @@
+<body class="fond">
+    <section class="vh-100 gradient-custom">
+    <div class="container  h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Edit Profile</h2>
+  
+                <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+  
+                  <div class="tex-left form-outline form-white mb-4">
+                        <label for="name">First Name</label>
+                        <input type="text" class="form-control form-control-lg" id="name" name="name" [(ngModel)]="per.nombre" required>
+                  </div>
+  
+                  <div class="form-outline form-white mb-4">
+                    <label for="apellido">Last Name</label>
+                    <input type="text" class="form-control form-control-lg" id="apellido" name="apellido" [(ngModel)]="per.apellido" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="titulo">degree</label>
+                    <input type="text" class="form-control form-control-lg" id="titulo" name="titulo" [(ngModel)]="per.titulo" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="about">About</label>
+                    <input type="text" class="form-control form-control-lg" id="about" name="about" [(ngModel)]="per.about" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="img">Profile Pic</label>
+                    <input type="text" class="form-control form-control-lg" id="img" name="img" [(ngModel)]="per.img" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="portada ">Banner</label>
+                    <input type="text" class="form-control form-control-lg" id="portada " name="portada " [(ngModel)]="per.portada" required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="linkedin">Linkedin</label>
+                    <input type="text" class="form-control form-control-lg" id="linkedin" name="linkedin" [(ngModel)]="per.linkedin  " required>
+                  </div>
+
+                  <div class="form-outline form-white mb-4">
+                    <label for="git">Git Hub</label>
+                    <input type="git" class="form-control form-control-lg" id="git" name="git" [(ngModel)]="per.git  " required>
+                  </div>
+                  <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+  
+                  <button class=" align-items-center btn btn-outline-light btn-lg px-5" type="submit">Update Profile</button>
+  
+                </form>
+  
+              </div>
+  
+              <div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>

@@ -10,7 +10,7 @@ import { Hys } from '../model/hys';
 
 export class HysService {
 
-  hysURL = "http://localhost:8080/api/hys/";
+  hysURL = "https://axelluna-backend.herokuapp.com/api/hys/";
 
   constructor(private httpClient: HttpClient) { }
 
